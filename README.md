@@ -1,17 +1,19 @@
 # TODO-APP-MONGO
 
+requirements -
+
+install node (for npm) 
+install mongoDB
 
 Commands-
 
 > cd to this location 
 
-requirements -
 
-install node (for npm) 
 
 run-
 
->Install & Run mongodb server in your system 
+>Install & Run mongoDB server in your system 
 
 > npm i 
 
