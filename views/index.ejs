@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="rain"></div>
+        <div class="ripple-container">
+            <div class="ripple"></div>
+        </div>
+        <div class="dateBox center">
+            <%- `${day},${month} ${year}` %>
+        </div>
+        <div class="writeBox center">
+            <h3>Type in box below</h3>
+
+        </div>
+        <div class="listBox center">
+            <% if (locals.itemsList) { %>
+                <ul>
+                    <%itemsList.forEach((item)=> { %>
+                        <li>
+                            <%=item %>
+                        </li>
+                        <%}) %>
+
+                </ul>
+                <% }else{ %>
+                    <h1>   Reload</h1>
+                    <%} %>
+
+        </div>
+        <div class="addBox center">
+
+            <form action="/add" method="POST">
+                <input class="inputBox" type="text" name="addText" placeholder="Type to add">
+
+                <input class="plus" type="submit" value="+">
+            </form>
+
+
+        </div>
+
+    </div>
+
+    <script src="client.js"></script>
+</body>
+
+</html>

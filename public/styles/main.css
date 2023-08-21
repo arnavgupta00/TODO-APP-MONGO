@@ -1,0 +1,204 @@
+
+:root{
+    --textColor: #d2d3bb;
+    --divColor: #52734D;
+    --pageBg:#d2d3bb;
+}
+
+/*CURSOR ANIMATION*/
+/**/
+.ripple-container {
+    position: relative;
+    width: 100vw;
+    height: max-content;
+    overflow: hidden;
+    z-index: 2;
+    grid-area: 1/1/-1/-1;
+
+}
+
+.ripple {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(216, 14, 14);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    animation: rippleAnimation 1s linear infinite;
+
+
+}
+
+@keyframes rippleAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+/*CURSOR ANIMATION OVER*/
+/* BALL ANIMATION */
+.rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .drop {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: var(--divColor);
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+
+/* BALL ANIMATION OVER*/
+html{
+    background-color:var(--pageBg) ;
+}
+
+.main{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    
+
+}
+
+.center{
+    grid-column-start:2 ;
+    grid-column-end:  3; 
+    margin: 2%;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+
+.writeBox{
+    height: 50px;
+    background-color: var(--divColor);
+    color: var(--textColor);
+    font-size: 20px;
+    font-family: Verdana;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.dateBox{
+    height: 50px;
+    background-color: var(--divColor);
+    color: var(--textColor);
+    font-size: 40px;
+    font-family: Verdana;
+    text-align: center;
+}
+.listBox{
+    height: fit-content;
+    background-color: var(--divColor);
+    color: var(--textColor);
+    font-size: 20px;
+    font-family: Verdana;
+    text-align: start;
+    
+}
+.addBox{
+    height: 70px;
+    background-color: var(--divColor);
+    color: var(--textColor);
+    font-size: 40px;
+    font-family: Verdana;
+    text-align: center;
+    
+}
+form{
+    display: flex;
+}
+.inputBox{
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 3%;
+    margin-top: 1%;
+    height: 50px;
+    width: 80%;
+    align-items:flex-start ;
+    font-size: 25px;
+    font-family: Verdana;
+    color: var(--textColor);
+}
+.inputBox:hover{
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: var(--textColor);
+    margin-left: 3%;
+    margin-top: 1%;
+    height: 50px;
+    width: 80%;
+    align-items:flex-start ;
+    font-size: 25px;
+    font-family: Verdana;
+    color: var(--textColor);
+}
+.plus{
+    margin: 1%;
+    align-items: end;
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--textColor);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+.plus:hover{ 
+    opacity: 0.5;
+}
+
+@supports (display: grid){
+    @media (max-width: 1000px){
+        .writeBox{
+            font-size: 10px;
+        }
+        .dateBox{
+            font-size: 20px;
+        }
+        .addBox{
+            font-size: 20px;
+            height: 45px;
+        }
+        .listBox{
+            font-size: 10px;
+        }
+        .plus{
+            font-size: 25px;
+        }
+        .inputBox{
+            font-size: 10px;
+            height: 30px;
+            margin-top: 3%;
+        }
+        .inputBox:hover{
+            font-size: 10px;
+            height: 30px;
+            margin-top: 3%;
+        }
+        
+    }
+}
+
