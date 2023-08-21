@@ -2,7 +2,7 @@
 
 requirements -
 
-install node (for npm) and MongoDB
+install Node (for npm) and MongoDB
 
 
 Commands-
