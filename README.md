@@ -2,8 +2,8 @@
 
 requirements -
 
-install node (for npm) 
-install mongoDB
+install node (for npm) and MongoDB
+
 
 Commands-
 
