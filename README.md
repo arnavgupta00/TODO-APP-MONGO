@@ -9,11 +9,7 @@ Commands-
 
 > cd to this location 
 
-
-
-run-
-
->Install & Run mongoDB server in your system 
+>Run mongoDB server in your system 
 
 > npm i 
 
